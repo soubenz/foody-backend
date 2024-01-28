@@ -15,8 +15,8 @@ import dateparser
 
 class BaseScraper:
     
-    def __init__(self, playwright):
-        self.browser = playwright.chromium.launch(headless=True)
+    def __init__(self, playwright, headless=True):
+        self.browser = playwright.chromium.launch(headless=headless)
         context = self.browser.new_context()
         page = context.new_page()
         stealth_sync(page)
