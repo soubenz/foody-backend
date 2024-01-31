@@ -15,8 +15,19 @@ replicate = "^0.22.0"
 playwright = "^1.41.0"
 loguru = "^0.7.2"
 playwright-stealth = "^1.0.6"
+alembic = "^1.13.1"
+sqlalchemy = "^2.0.25"
+tortoise-orm = {extras = ["asyncpg"], version = "^0.20.0"}
+aerich = "^0.7.2"
+asyncpg = "0.24.0"
+python-dotenv = "^1.0.1"
 
 
+
+[tool.aerich]
+tortoise_orm = "benz_scraper.db.TORTOISE_ORM"
+location = "./migrations"
+src_folder = "./."
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
